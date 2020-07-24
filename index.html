@@ -58,7 +58,6 @@
       camera_pivot.add(camera);
 
       camera.position.set(50, 50, 500);
-      camera.lookAt(camera_pivot.position);
 
       controls.update();
 
@@ -151,6 +150,7 @@
       cube.position.z = 250;
 
       scene.add(cube);
+      camera.lookAt(cube.position);
 
       var animate = function () {
         requestAnimationFrame(animate);
