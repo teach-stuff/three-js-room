@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>three.js webgl - orbit controls</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -23,7 +22,7 @@
   <body>
     <div id="info">
       <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a>
-      - orbit controls
+      Room cube
     </div>
 
     <script type="module">
@@ -98,7 +97,7 @@
         material
       );
 
-      floor.position.y = 100;
+      floor.position.y = -100;
       floor.rotation.x = Math.PI / 2;
 
       scene.add(floor);
@@ -122,8 +121,8 @@
         new THREE.MeshBasicMaterial({ color: 0x42ecf5 })
       );
       ceiling.side = THREE.DoubleSide;
-      ceiling.position.y = -100;
-      ceiling.rotation.x = -90 * (Math.PI / 180);
+      ceiling.position.y = 100;
+      ceiling.rotation.x = 90 * (Math.PI / 180);
       scene.add(ceiling);
 
       var leftWall = new THREE.Mesh(
@@ -167,7 +166,7 @@
         topCamera.updateProjectionMatrix();
         renderer.render(scene, topCamera);
 
-        left = 0.5 * SCREEN_W + 50;
+        left = 0.5 * SCREEN_W + 1;
         bottom = 1;
         width = 0.5 * SCREEN_W - 2;
         height = SCREEN_H - 2;
