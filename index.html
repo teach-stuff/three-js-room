@@ -214,6 +214,31 @@
         camera.updateMatrixWorld(true);
       }
 
+      function cubeScale(scale, translaction) {
+        cube.matrixAutoUpdate = false;
+
+        cube.matrix.set(
+          scale.x,
+          0,
+          0,
+          0,
+          0,
+          scale.y,
+          0,
+          translaction.y,
+          0,
+          0,
+          scale.z,
+          translaction.z,
+          0,
+          0,
+          0,
+          1
+        );
+
+        cube.updateMatrixWorld(true);
+      }
+
       var animate = function () {
         requestAnimationFrame(animate);
 
@@ -338,6 +363,7 @@
           new THREE.Vector3(0, 1, 0)
         );
 
+        //cubeScale(new THREE.Vector3(2, 2, 2), new THREE.Vector3(0, 10, pos));
         //        camera.lookAt(cube.position);
       }
 
