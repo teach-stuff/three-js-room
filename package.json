@@ -1,0 +1,8 @@
+{
+  "name": "three-js-room",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/teach-stuff/three-js-room-.git",
+  "author": "GaganUnvi <38974523+GaganUnvi@users.noreply.github.com>",
+  "license": "MIT"
+}
